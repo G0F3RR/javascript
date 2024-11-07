@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+     <meta charset="utf-8">
+     <title>Praca z oknami- Redzimski</title>   
+    </head>
+    <body>
+        <script>
+            function WinOpen_z1()
+            {
+                window.open("zdj1.png","O nie kotek jest znudzony","toolbar=no,directories=no,height=190,width=165,top=1000,left=400");
+            }
+            function WinOpen_z2()
+            {
+                window.open("zdj2.png","O nie ktoś wystraszył kota","toolbar=no,directories=no,height=190,width=165,top=1000,left=600");
+            }
+            function WinOpen_z3()
+            {
+                window.open("zdj3.png","Kotek jest zdiwiony","toolbar=no,directories=no,height=190,width=165,top=1000,left=800");
+            }
+            function WinOpen_z4()
+            {
+                window.open("zdj4.png","I się obraził","toolbar=no,directories=no,height=190,width=165,top=1000,left=1000");
+            }
+            function okno_zamknij()
+            {
+                window.close()
+            }
+
+            document.write("wykonał: Alan Redzimski mój numer w dzienniku 25 , czyli mam układ [(4) mod 4=1] układ 1".bold().fontsize(7).fontcolor("red")+"<br><br>")
+        </script>
+        <form align="center">
+            <input type="button" value="grafika1" onclick="WinOpen_z1('')">
+            <input type="button" value="grafika2" onclick="WinOpen_z2('')">
+            <input type="button" value="grafika3" onclick="WinOpen_z3('')">
+            <input type="button" value="grafika4" onclick="WinOpen_z4('')"><br><br><br><br><br>
+            <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+        </form>
+
+    </body>
+    </html>
