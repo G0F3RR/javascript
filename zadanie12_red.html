@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Proste obliczenia</title>
+</head>
+<body>
+<div style="color:green;font-size:43px;">
+    <script language="JavaScript">
+        var d1_red = prompt("D1=", "");
+        var d2_red = prompt("D2=", "");
+        var g1_red = prompt("G1=", "");
+        var g2_red = prompt("G2=", "");
+        var d_s;
+        var g_s;
+        var roz;
+        var roz_g;
+
+        var a = parseFloat(d1_red);
+        var b = parseFloat(d2_red);
+        var c = parseFloat(g1_red);
+        var d = parseFloat(g2_red);
+
+        d_s = 86400; 
+        g_s = 3600; 
+        roz = a - b;
+        roz_g = c - d;
+
+        var total_seconds = (roz * d_s) + (roz_g * g_s);
+
+        document.write("ilość sekund=" + total_seconds + " sekund <br>");
+    </script>
+</div>
+</body>
+</html>
+<!-- Alan Redzimski -->
