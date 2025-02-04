@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function Pole_redzimski()
+{
+    var a_red = parseFloat(document.getElementById('dlugosc').value);
+    var b_red = a_red * a_red;
+    document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_red.toFixed(2) + " cm^2";
+}
+function Obwod_redzimski()
+{
+    var a_red = parseFloat(document.getElementById('dlugosc').value);
+    var b_red = 4 * a_red;
+    document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b_red.toFixed(2) + " cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="Pole_redzimski()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="Obwod_redzimski()"><br><br>
+<div style="color:red;font-size:50px;" id="nazwa"></div>
+<button class="button" onclick="window.location.href='index.html'">wróc</button>
+</body>
+</html>
+<!-- Alan Redzimski -->
