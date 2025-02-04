@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8"> 
+    <title>zad20 kod</title>
+</head>
+<body><h1>HTML</h1>
+<textarea name="zad20" id="1" cols="80" rows="80">
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 20</title>
+        <script>
+            function AB_red(xa_red, ya_red, xb_red, yb_red) {
+                return Math.sqrt(Math.pow(xb_red - xa_red, 2) + Math.pow(yb_red - ya_red, 2));
+            }
+    
+            function BC_red(xb_red, yb_red, xc_red, yc_red) {
+                return Math.sqrt(Math.pow(xc_red - xb_red, 2) + Math.pow(yc_red - yb_red, 2));
+            }
+    
+            function AC_red(xa_red, ya_red, xc_red, yc_red) {
+                return Math.sqrt(Math.pow(xc_red - xa_red, 2) + Math.pow(yc_red - ya_red, 2));
+            }
+    
+            function kalkulacje() {
+                const xa_red = parseFloat(document.getElementById('xa_red').value);
+                const ya_red = parseFloat(document.getElementById('ya_red').value);
+                const xb_red = parseFloat(document.getElementById('xb_red').value);
+                const yb_red = parseFloat(document.getElementById('yb_red').value);
+                const xc_red = parseFloat(document.getElementById('xc_red').value);
+                const yc_red = parseFloat(document.getElementById('yc_red').value);
+    
+                const ab_red = AB_red(xa_red, ya_red, xb_red, yb_red);
+                const bc_red = BC_red(xb_red, yb_red, xc_red, yc_red);
+                const ac_red = AC_red(xa_red, ya_red, xc_red, yc_red);
+    
+                document.getElementById('result').innerText = `AB: ${ab_red.toFixed(2)}, BC: ${bc_red.toFixed(2)}, AC: ${ac_red.toFixed(2)}`;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Oblicz długości boków trójkąta</h1>
+        <form onsubmit="kalkulacje(); return false;">
+            <label for="xa_red">A(xa_red):</label>
+            <input type="number" id="xa_red" step="any" required>
+            <label for="ya_red">A(ya_red):</label>
+            <input type="number" id="ya_red" step="any" required><br>
+            <label for="xb_red">B(xb_red):</label>
+            <input type="number" id="xb_red" step="any" required>
+            <label for="yb_red">B(yb_red):</label>
+            <input type="number" id="yb_red" step="any" required><br>
+            <label for="xc_red">C(xc_red):</label>
+            <input type="number" id="xc_red" step="any" required>
+            <label for="yc_red">C(yc_red):</label>
+            <input type="number" id="yc_red" step="any" required><br>
+            <button type="submit">Oblicz</button>
+        </form>
+        <p id="result"></p>
+        <button class="button" onclick="window.location.href='index.html'">wróc</button>
+    </body>
+    </html>
+    <!-- Alan Redzimski -->
+</textarea>
+</body>
+</html>
