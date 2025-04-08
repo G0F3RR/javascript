@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">
+function klient(nazwisko_a,imie_a,zawod_a)
+{
+this.nazwisko=nazwisko_a;
+this.imie=imie_a;
+this.zawod=zawod_a;
+}
+klient.prototype.wypisz = function ()
+{
+alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod);
+};
+klient.prototype.pokaz_nazwisko_ucznia = function ()
+{
+alert(this.nazwisko);
+};
+var osoba1 = new klient("Kowalski", "Janna", "rajdowca");
+var osoba2 = new klient('Nowak', 'Ania', 'dziekanat');
+osoba1.wypisz();
+osoba2.wypisz();
+osoba1.pokaz_nazwisko_ucznia();
+osoba2.pokaz_nazwisko_ucznia();
+document.write("dostęp do właściwości"+"<br>");
+document.write("klient pierwszy"+" "+osoba1.nazwisko+" "+osoba1.imie+" "+osoba1.zawod);
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe 
+</body>
+</html>
+<!-- Alan Redzimski -->
