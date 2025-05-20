@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie 40 - Redzimski</title>
+  <style>
+    #wynik_red {
+      margin-top: 20px;
+      font-size: 20px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kalkulator - Redzimski Alan 3G</h2>
+  <input type="text" id="a_red" placeholder="Pierwsza liczba"><br><br>
+  <input type="text" id="b_red" placeholder="Druga liczba"><br><br>
+
+  <button onclick="suma_red()">DODAWANIE</button>
+  <button onclick="roznica_red()">ODEJMOWANIE</button>
+  <button onclick="iloczyn_red()">MNOŻENIE</button>
+  <button onclick="iloraz_red()">DZIELENIE</button>
+
+  <div id="wynik_red"></div>
+
+  <script>
+    function pobierzLiczby_red() {
+      var a = document.getElementById("a_red").value;
+      var b = document.getElementById("b_red").value;
+      return { a, b };
+    }
+
+    function waliduj_red(a, b) {
+      if (a === "" || b === "") {
+        document.getElementById("wynik_red").innerHTML = "Proszę uzupełnić obie liczby.";
+        return false;
+      }
+      return true;
+    }
+
+    function suma_red() {
+      var { a, b } = pobierzLiczby_red();
+      if (!waliduj_red(a, b)) return;
+      var wynik = parseFloat(a) + parseFloat(b);
+      document.getElementById("wynik_red").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+    }
+
+    function roznica_red() {
+      var { a, b } = pobierzLiczby_red();
+      if (!waliduj_red(a, b)) return;
+      var wynik = parseFloat(a) - parseFloat(b);
+      document.getElementById("wynik_red").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+    }
+
+    function iloczyn_red() {
+      var { a, b } = pobierzLiczby_red();
+      if (!waliduj_red(a, b)) return;
+      var wynik = parseFloat(a) * parseFloat(b);
+      document.getElementById("wynik_red").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+    }
+
+    function iloraz_red() {
+      var { a, b } = pobierzLiczby_red();
+      if (!waliduj_red(a, b)) return;
+      if (parseFloat(b) === 0) {
+        document.getElementById("wynik_red").innerHTML = "Nie wolno dzielić przez zero.";
+        return;
+      }
+      var wynik = parseFloat(a) / parseFloat(b);
+      document.getElementById("wynik_red").innerHTML = "Wynik działania wynosi: " + wynik.toFixed(2);
+    }
+  </script>
+</body>
+</html>
+ <!-- Alan Redzimski -->
