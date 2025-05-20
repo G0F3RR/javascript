@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8"> 
+    <title>zad30 kod</title>
+</head>
+<body><h1>HTML</h1>
+<textarea name="zad30" id="1" cols="80" rows="80">
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+      <meta charset="UTF-8">
+      <title>Zadanie 38 - Redzimski</title>
+    </head>
+    <body>
+      <h2>Zadanie 38 - Redzimski Alan 3A</h2>
+      <button onclick="zadanie38_red()">Wybierz opcję</button>
+    
+      <script>
+        function zadanie38_red() {
+          let opcja1 = 4;
+          let opcja2 = 29;
+          let opcja3 = 66;
+    
+          let wybor = parseInt(prompt(`Wybierz numer opcji:\n${opcja1} - Teoria operatorów logicznych\n${opcja2} - Przedział (od;do]\n${opcja3} - Przedział (-∞, liczba1) lub [liczba2, +∞)`));
+    
+          if (wybor === opcja1) {
+            document.write("<h3 style='color:blue; font-size:20px;'>Operator && - i<br>Operator || - lub<br>Operator ! - zaprzeczenie</h3>");
+          } else if (wybor === opcja2) {
+            let liczba = parseFloat(prompt("Podaj liczbę do sprawdzenia:"));
+            let od = 10;
+            let do_ = 25;
+            if (liczba > od && liczba <= do_) {
+              document.write(`<p style='color:green;'>Liczba ${liczba} należy do przedziału (${od}; ${do_}]</p>`);
+            } else {
+              document.write(`<p style='color:red;'>Liczba ${liczba} NIE należy do przedziału (${od}; ${do_}]</p>`);
+            }
+          } else if (wybor === opcja3) {
+            let liczba = parseFloat(prompt("Podaj liczbę do sprawdzenia:"));
+            let liczba1 = 12;
+            let liczba2 = 40;
+            if (liczba < liczba1 || liczba >= liczba2) {
+              document.write(`<p style='color:green;'>Liczba ${liczba} należy do przedziału (-∞, ${liczba1}) lub [${liczba2}, +∞)</p>`);
+            } else {
+              document.write(`<p style='color:red;'>Liczba ${liczba} NIE należy do tych przedziałów</p>`);
+            }
+          } else {
+            document.write("<p style='color:red;'>Niepoprawna opcja!</p>");
+          }
+        }
+      </script>
+    </body>
+    </html>
+     <!-- Alan Redzimski -->
+</textarea>
+</body>
+</html>
