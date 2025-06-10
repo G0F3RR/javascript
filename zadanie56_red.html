@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Redzimski 3G - Zadanie56</title>
+</head>
+<body>
+<script>
+  let licznik_red = 0;
+  for (let i_red = 0; i_red < 40; i_red++) {
+    let wynik = i_red * i_red + i_red + 41;
+    document.write("i = " + i_red + "  w(" + i_red + ") = " + wynik + "<br>");
+    licznik_red++;
+    if (licznik_red % 5 === 0) {
+      confirm("Kontynuować?");
+    }
+  }
+</script>
+</body>
+</html>

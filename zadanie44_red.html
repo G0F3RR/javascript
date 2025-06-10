@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta charset="UTF-8"><title>Zadanie44</title></head>
+<body>
+<script>
+  let ile_red = (9 % 4) + 10;  // 13
+  let wielkosc_red = (9 % 3) + 40;  // 42px
+  document.write("ilość wykonania pętli = " + ile_red + "<br>");
+  document.write("wielkość liter = " + wielkosc_red + "px<br>");
+
+  for(let i_red=1; i_red<=ile_red; i_red++) {
+    let tekst = (i_red % 2 !== 0) ? "Redzimski" : "Alan";
+    document.write("<span style='font-size:" + wielkosc_red + "px;'>" + tekst + "</span><br>");
+  }
+</script>
+</body>
+</html>

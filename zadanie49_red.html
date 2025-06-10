@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta charset="UTF-8"><title>Zadanie49</title></head>
+<body>
+<script>
+  let x_red = parseFloat(prompt("Podaj pierwszą liczbę:"));
+  let y_red = parseFloat(prompt("Podaj drugą liczbę:"));
+  let dzialanie_red = prompt("Wpisz działanie (+, -, *, /):");
+
+  let wynik_red;
+  switch (dzialanie_red) {
+    case '+': wynik_red = x_red + y_red; break;
+    case '-': wynik_red = x_red - y_red; break;
+    case '*': wynik_red = x_red * y_red; break;
+    case '/':
+      wynik_red = y_red !== 0 ? (x_red / y_red) : "Nie wolno dzielić przez 0!";
+      break;
+    default:
+      wynik_red = "Nieznane działanie.";
+  }
+  document.write("Wynik: " + wynik_red);
+</script>
+</body>
+</html>

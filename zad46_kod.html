@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8"> 
+    <title>zad30 kod</title>
+</head>
+<body><h1>HTML</h1>
+<textarea name="zad30" id="1" cols="80" rows="80">
+<!DOCTYPE html>
+<html lang="pl">
+<head><meta charset="UTF-8"><title>Zadanie46</title></head>
+<body>
+<script>
+  let h_red, a_red;
+  do {
+    h_red = parseFloat(prompt("Podaj wysokość trójkąta (h):"));
+  } while (h_red <= 0);
+
+  do {
+    a_red = parseFloat(prompt("Podaj podstawę trójkąta (a):"));
+  } while (!(a_red > 0));
+
+  let pole_red = 0.5 * a_red * h_red;
+  document.write("Pole trójkąta: " + pole_red.toFixed(2) + " cm²");
+</script>
+</body>
+</html>
+
+</textarea>
+</body>
+</html>
